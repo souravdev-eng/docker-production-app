@@ -6,4 +6,4 @@ services:
 before_install:
   - docker build -t souravdeveloper/docker-production-app -f Dockerfile.dev .
 script:
-  - docker run souravdeveloper/ocker-production-app npm run test -- --coverage
+  - docker run -e CI=true souravdeveloper/docker-production-app npm run test
